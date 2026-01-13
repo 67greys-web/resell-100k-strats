@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Product Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Get Access to Our Product</h1>
+    <p>Enter your email and click the button below to proceed.</p>
+    <input type="email" id="email" placeholder="Your email" required>
+    <br><br>
+    <button class="button" id="proceedBtn">Get Access</button>
+  </div>
+
+  <script>
+    document.getElementById("proceedBtn").addEventListener("click", async () => {
+      const email = document.getElementById("email").value;
+      if (!email) {
+        alert("Please enter your email.");
+        return;
+      }
+
+      // Here, you would send the email to your backend to handle the payment and link process
+      // For now, we'll just show a message.
+      alert("Check your email for access!");
+    });
+  </script>
+</body>
+</html>
